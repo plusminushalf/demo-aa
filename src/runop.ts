@@ -7,6 +7,7 @@ import { MyWalletApi } from '.'
 import { deployments } from 'hardhat';
 import { MyWalletDeployer__factory } from './types'
 import { Greeter__factory } from './types/factories/Greeter__factory'
+import { MyPaymasterApi } from './MyPaymasterApi'
 
 
 /** Contracts deployed on goerli network */
@@ -68,12 +69,15 @@ const runop = async () => {
   const walletAddress = await MyWalletDeployer.getDeploymentAddress(entryPointAddress, ownerAddress, 0)
   console.log('--- end deploying MyWalletDeployer contract ---')
 
+  const myPaymasterApi = new MyPaymasterApi();
+
   const smartWalletAPI = new MyWalletApi({
     provider: originalProvider,
     entryPointAddress: entryPoint.address,
     walletAddress,
     owner: orignalSigner,
     factoryAddress,
+    paymasterAPI: myPaymasterApi
   })
 
   /** This marks the end of creation of our custom wallet api */
