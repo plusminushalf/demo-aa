@@ -28,7 +28,7 @@ const runop = async () => {
   /** Deploy greeter to test */
   console.log('--- deploying Greeter contract ---')
   const Greeter_factory = await ethers.getContractFactory('Greeter', orignalSigner)
-  const Greeter = await Greeter_factory.deploy()
+  let Greeter = await Greeter_factory.deploy()
   await Greeter.deployTransaction.wait()
   console.log('Greeter Address: ', Greeter.address)
   console.log('--- end deploying Greeter contract ---')
@@ -76,7 +76,7 @@ const runop = async () => {
 
   console.log('SCW address: ', await aaSigner.getAddress())
 
-  Greeter.connect(aaSigner)
+  Greeter = Greeter.connect(aaSigner)
 
   const tx = await Greeter.addGreet({
     value: ethers.utils.parseEther('0'),
