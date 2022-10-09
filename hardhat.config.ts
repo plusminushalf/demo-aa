@@ -1,5 +1,7 @@
 import { HardhatUserConfig } from 'hardhat/config'
 import '@nomicfoundation/hardhat-toolbox'
+import 'hardhat-deploy';
+
 
 import * as fs from 'fs'
 
