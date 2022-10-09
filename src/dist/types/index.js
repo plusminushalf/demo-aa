@@ -11,8 +11,10 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
     o[k2] = m[k];
 }));
 exports.__esModule = true;
-exports.MyWalletDeployer__factory = exports.MyWallet__factory = exports.factories = void 0;
+exports.MyWalletDeployer__factory = exports.MyWallet__factory = exports.Greeter__factory = exports.factories = void 0;
 exports.factories = require("./factories");
+var Greeter__factory_1 = require("./factories/Greeter__factory");
+__createBinding(exports, Greeter__factory_1, "Greeter__factory");
 var MyWallet__factory_1 = require("./factories/MyWallet__factory");
 __createBinding(exports, MyWallet__factory_1, "MyWallet__factory");
 var MyWalletDeployer__factory_1 = require("./factories/MyWalletDeployer__factory");

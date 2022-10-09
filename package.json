@@ -5,6 +5,7 @@
     "compile": "./scripts/hh-wrapper compile",
     "tsc": "tsc",
     "test": "./scripts/hh-wrapper test",
+    "runop": "hardhat run ./src/runop.ts",
     "prepack": "./scripts/prepack-contracts-package.sh"
   },
   "devDependencies": {
