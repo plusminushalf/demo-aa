@@ -10,7 +10,7 @@ import { Greeter__factory } from './types/factories/Greeter__factory'
 
 
 /** Contracts deployed on goerli network */
-const ENTRYPOINT_ADDR = '0x1b98F08dB8F12392EAE339674e568fe29929bC47'
+const ENTRYPOINT_ADDR = '0x2167fA17BA3c80Adee05D98F0B55b666Be6829d6'
 
 const runop = async () => {
   console.log('--- starting runop ---')
