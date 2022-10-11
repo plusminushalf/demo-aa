@@ -1,13 +1,20 @@
-# Sample Hardhat Project
+# Create Custom SCW
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
+### Intall Dependency
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+yarn
+```
+
+### Prepack the contracts
+This compiles the SCW & places the types in `src/` folder
+
+```shell
+yarn prepack
+```
+
+### Run the runOp file to test the SCW
+
+```shell
+yarn runop --network goerli
 ```
