@@ -16,5 +16,5 @@ yarn prepack
 ### Run the runOp file to test the SCW
 
 ```shell
-yarn runop --network goerli
+INFURA_ID=<infura-id> MNEMONIC_FILE=<file-containing-private-key> yarn runop --network goerli
 ```
