@@ -13,7 +13,7 @@ yarn
 
 - Then we need to build individual packages and resolve dependancy issues. For this first create a file `testnet-mnemonic.txt` and paste your private key inside it. Now in the terminal:
 ```shell
-MNEMONIC_FILE=testnet-mnemonic.txt yarn preprocess
+MNEMONIC_FILE=<path-to-mnemonic> yarn preprocess
 ```
 
 - Now replace the mneumonic present at `packages/bundler/localconfig/mnemonic.txt` with your private key.
@@ -32,7 +32,7 @@ MNEMONIC_FILE=testnet-mnemonic.txt yarn preprocess
 }
 ```
 
--  As we have changed the mneumonic to private key, we need to make some changes to incoporate this:
+-  As we have changed the mnemonic to private key, we need to make some changes to incoporate this:
     - We need to make changes in the `hardhat.config.ts` present inside `/bundler` package. Replace the `accounts` in `getNetwork` with:
     ```shell
         accounts: [mnemonic]
@@ -50,7 +50,7 @@ MNEMONIC_FILE=testnet-mnemonic.txt yarn preprocess
         ```
 - Now you can start the bundler:
 ```shell
-INFURA_ID=<YOUR_INFURA_ID> yarn run bundler --network goerli
+INFURA_ID=<YOUR_INFURA_ID> yarn run bundler
 ```
 
 You can add your INFURA_ID in the hardhat.config.ts `infuraUrl` instead of passing it in command line
